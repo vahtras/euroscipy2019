@@ -172,6 +172,7 @@ layout: false
 * Teaching Python at master and Ph.D. levels
 * Background in HPC
 
+&lt;img src=&#34;pdc.png&#34; height=&#34;300&#34;&gt;
 ---
 
 ## What we do
@@ -185,13 +186,13 @@ layout: false
 * Solve large eigenvalue equations
 
 $$
-Ax = \lambda x
+Ex = \lambda x
 $$
 
 * Solve large linear systems of equations
 
 $$
-Ax = b
+(E-\omega S)N = V^\omega
 $$
 
 &lt;img src=&#34;spectrum.png&#34; height=&#34;200&#34;&gt;
@@ -199,6 +200,22 @@ $$
 * Typical dimension $10^6$
 * Matrix too large to store
 * Solved by iteration
+
+---
+## Iterative solvers
+
+* project equation on a reduces space of trial vectors
+
+$$ (b^T(E-wS)b) (b^T N) = (b^T V) $$
+
+* solve small problem with `numpy.linalg.solve` (lapack/mkl)
+
+* calculate residual error - converged when small enough
+
+$$ \tilde N = b(b^T N) $$
+$$ R = (E - wS)\tilde N  - V$$
+
+* generate new trial vector and repeat
 
 ---
 
@@ -222,7 +239,7 @@ $$
 * A number of (long) end to end tests
 * Difficult to modify/extend
 
---
+
 
 ### However
 
@@ -233,7 +250,7 @@ $$
 
 ---
 
-## VeloxChem
+## Introducing VeloxChem
 
 * First release October 2019
 * Python driven 
@@ -278,7 +295,18 @@ $ mpirun -N 100 python -m veloxchem molecule.inp molecule.out
     * Andreas Dreuw, 
     * Patrick Norman
 
+* Adaptation for GPU in progress
+
 ---
+
+## Summary
+
+* VeloxChem - a new quantum chemistry program aimed at spectroscopies
+* Open source
+* Easy to obtain and install (pip)
+* Runs on large-scale HPC clusters
+* Highly competitive with other similar softwars
+
     </textarea>
 
     <script src="/euroscipy2019/refreeze/js/remark-latest.min.js" type="text/javascript"></script>
