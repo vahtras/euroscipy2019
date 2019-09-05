@@ -41,6 +41,47 @@ layout: false
 <img src="qmmm.png" height="500">
 
 ---
+## Solving the Schrödinger equation
+
+$$
+(H + V)\Psi = i\hbar\frac{\partial\Psi}{\partial t}
+$$
+
+* Determine ground state
+* Molecular properties from perturbation theory 
+
+---
+
+## Paul M. Dirac
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Paul_Dirac%2C_1933.jpg" height="300">
+
+*The underlying physical laws necessary for the mathematical theory of a large
+part of physics and the whole of chemistry are thus completely known, and the
+difficulty is only that the exact application of these laws leads to equations
+much too complicated to be soluble.* 
+
+*It therefore becomes desirable that
+approximate practical methods of applying quantum mechanics should be
+developed, which can lead to an explanation of the main features of complex
+atomic systems without too much computation.*
+
+Proc.Roy.Soc. A 123, 94 (1929)
+
+---
+
+## Numerical bottleneck: integrals
+
+* Discrete representation of state -> basis functions
+* Partial differential equations -> Matrix equations
+* Electron-electron interactions represented by 4-dimensional tensors
+
+
+$$ F[p, q] = \sum_{rs} L[p, q, r, s] D[r, s] $$
+
+* Typically the part that is parallelized in QC codes
+
+---
 
 ## What we do in practice
 
