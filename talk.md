@@ -87,7 +87,7 @@ $$ R = (E - wS)\tilde N  - V$$
 * The Dalton project http://www.daltonprogram.org
 * Research development tool since 1980s
 * Mostly Fortran/C
-* $ \gt 10^6 $ *SLOC*
+* 1M *SLOC*
 * Open-source since 2016
 * Successful (mostly) Scandinavian collaboration
 * Code has evolved organically over > 30 years
