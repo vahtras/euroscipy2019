@@ -197,7 +197,7 @@ $ mpirun -N 100 python -m veloxchem molecule.inp molecule.out
     * Andreas Dreuw, 
     * Patrick Norman
 
-* Adaptation for GPU in progress
+* GPU work in progress
 
 ---
 
@@ -207,5 +207,7 @@ $ mpirun -N 100 python -m veloxchem molecule.inp molecule.out
 * Open source
 * Easy to obtain and install (pip)
 * Runs on large-scale HPC clusters
-* Highly competitive with other similar softwars
+* Highly competitive with other similar softwares
+* First release October 2019
 
+<iframe src="https://veloxchem.org" height="400" width="500"> </iframe>
